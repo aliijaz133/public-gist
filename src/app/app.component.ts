@@ -14,9 +14,10 @@ export class AppComponent implements OnInit {
     this.getDataWeb.getData().subscribe(
       (response) => {
         this.posts = response;
+        console.log('Gist are found.');
       },
       (error) => {
-        console.log('Show Error');
+        console.log('Public Gist are not found.');
       }
     );
   }

@@ -7,30 +7,30 @@
         <th>Login</th>
         <th>Code</th>
         <th>Created At</th>
-        <th>Time</th>
+        <th class="th-time">Time</th>
       </tr>
     </thead>
     <tbody class="tbody-container">
-      <tr *ngFor="let post of posts">
-        <td>
+      <tr *ngFor="let gist of posts">
+        <td class="td-avatar">
           <img
-            src="{{ post.owner.avatar_url }}"
+            src="{{ gist.owner.avatar_url }}"
             alt="Gitter Image Preview"
             class="github-avatar"
           />
         </td>
-        <td>{{ post.owner.id }}</td>
-        <td>{{ post.owner.login }}</td>
+        <td>{{ gist.owner.id }}</td>
+        <td>{{ gist.owner.login }}</td>
         <td>
           <a
-            href="https://gist.github.com/{{ post.owner.login }}/{{ post.id }}"
+            href="https://gist.github.com/{{ gist.owner.login }}/{{ gist.id }}"
             target="_blank"
             rel="noopener noreferrer"
-            >{{ post.description }}</a
+            >{{ gist.description }}</a
           >
         </td>
-        <td>{{ post.created_at | date : "d/MMMM/Y" }}</td>
-        <td>{{ post.created_at | date : "shortTime" }}</td>
+        <td>{{ gist.created_at | date : "d/MMMM/Y" }}</td>
+        <td>{{ gist.created_at | date : "shortTime" }}</td>
       </tr>
     </tbody>
   </table>
