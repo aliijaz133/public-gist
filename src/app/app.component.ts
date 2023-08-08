@@ -14,7 +14,6 @@ export class AppComponent implements OnInit {
     this.getDataWeb.getData().subscribe(
       (response) => {
         this.posts = response;
-        console.log(this.posts);
       },
       (error) => {
         console.log('Show Error');
