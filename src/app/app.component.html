@@ -6,10 +6,10 @@
       <th>Login</th>
       <th>Code</th>
       <th>Created At</th>
-      <th>Updated At</th>
+      <th>Time</th>
     </tr>
   </thead>
-  <tbody>
+  <tbody class="tbody-container">
     <tr *ngFor="let post of posts">
       <td>
         <img
@@ -22,14 +22,14 @@
       <td>{{ post.owner.login }}</td>
       <td>
         <a
-          href="https://api.github.com/gists/public/{{ post.description }}"
+          href="https://gist.github.com/{{ post.owner.login }}/{{ post.id }}"
           target="_blank"
           rel="noopener noreferrer"
           >{{ post.description }}</a
         >
       </td>
       <td>{{ post.created_at | date : "d/MMMM/Y" }}</td>
-      <td>{{ post.owner.created_at | date : "shortTime" }}</td>
+      <td>{{ post.created_at | date : "shortTime" }}</td>
     </tr>
   </tbody>
 </table>
