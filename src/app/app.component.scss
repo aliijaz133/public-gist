@@ -1,3 +1,8 @@
+* {
+  margin: 0%;
+  box-sizing: border-box;
+}
+
 .table-container {
   display: flex;
   justify-content: center;
@@ -39,6 +44,8 @@ td {
 }
 
 .code-text {
+  word-break: initial;
+  word-wrap: break-word;
   font-family: "Courier New", Courier, monospace;
 }
 
